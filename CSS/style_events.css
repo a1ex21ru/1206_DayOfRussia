@@ -1,0 +1,134 @@
+*{
+    margin: 0;
+    padding: 0;
+    
+}
+
+a{
+    padding: 2%;
+    margin:5%;
+    text-decoration: none;
+    list-style-type: circle;
+   
+}
+.button{
+    padding: 2%;
+    margin:5%;
+    text-decoration: none;
+    
+    display: inline;
+    float: left;
+}
+
+.sidebar{
+
+    height: 50%;
+
+    margin-left: 0%;
+    margin-bottom: 15%;
+    margin-right: 0;
+    padding: 2% 5% 30% 5%;
+   
+    float: right;
+    background-color: bisque;
+}
+
+.main{
+    /*margin: 10%;*/
+    margin-left: 2%;
+    padding: 5%;
+    display: inline;
+    text-align: center;
+
+    
+}
+
+
+.event{
+    margin-bottom: 10px;
+    
+}
+
+.description{
+    text-overflow: ellipsis;
+    width: 60%;
+    padding: 3%;
+    padding-top: 1%;
+}
+
+.description1{
+    text-overflow: ellipsis;
+    width: 60%;
+    padding: 3%;
+    padding-top: 1%;
+    color:aliceblue;
+}
+
+.gagarin{
+    margin-left: -19%;
+}
+
+.navi{
+    list-style-type: square;
+}
+
+.left{
+    float: left;
+    margin-right: 1%;
+}
+
+.right{
+    float: right;
+    margin-right: 1%;
+}
+
+/* Контейнер подсказок */
+.tooltip {
+  position: relative;
+  display: inline-block;
+  border-bottom: 1px dotted black; /* Если вы хотите, чтобы точки под перемещаемым текстом */
+}
+
+/* Текст подсказки */
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  text-align: center;
+  padding: 5px 0;
+  border-radius: 6px;
+
+
+  /* Расположите текст подсказки */
+  position: absolute;
+  z-index: 1;
+  top: 125%;
+  left: 20%;
+  margin-left: -60px;
+
+
+  /* Исчезают в подсказке */
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/* Подсказка стрелка */
+.tooltip .tooltiptext::after 
+{
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: #555 transparent transparent transparent;
+  transform: rotate(180deg);
+}
+
+/* Отображение текста подсказки при наведении курсора мыши на контейнер подсказки */
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+}

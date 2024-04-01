@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    
+}
+
+div.main::-webkit-scrollbar,
+div.footer::-webkit-scrollbar,
+html::-webkit-scrollbar {
+    width: 0px;
+}
+
+body{
+    background: rgb(63,94,251);
+    background: radial-gradient(circle, rgba(63,94,251,1) 0%,
+     rgba(252,70,107,0.667) 100%);
+}
+
+
+.rus{
+    margin: auto;
+    padding-left: 30%;
+    padding-top: 2%;
+    text-transform: uppercase;
+}
+
+.rus + .button{
+    display: inline;
+}
+
+.gal_img{
+    border-radius: 8px;
+    width: 290px;
+    
+    transition-property: width, border-radius;
+    transition-duration: .3s;
+}
+
+.gal_img:hover {
+    border-radius: 30%;
+    width: 320px;
+    height: 220px;
+}
+
+
+.menu1{
+    float: left;
+    margin-left: 1%;
+
+}
+
+.menu2{
+    float: right;
+    margin-right: 1%;
+}
+
+.photo{
+    box-shadow: 10px 5px 5px red;
+    padding-left:4%;
+    margin-bottom: 2%;
+}
+
+.button{
+
+    height: 50%;
+
+    margin-left: 0%;
+    margin-bottom: 15%;
+    margin-right: 5%;
+    padding: 2% 5% 30% 5%;
+   
+    float: right;
+    /* background-color: bisque; */
+    
+    /* padding: 30%;
+    padding-right:50px;
+
+    float: right;
+
+    background-color: antiquewhite;
+
+    border: 2px double black; */
+    
+}
+
+a{
+    text-decoration: none;
+}
+
+.navi{
+    list-style-image: url(../img/gerb\ —\ копия.jpg);
+}
+
+td{
+    padding:10px;
+}
