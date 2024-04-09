@@ -1,9 +1,7 @@
  * {
      margin: 0;
      padding: 0;
-
      font-family: Klukva;
-
  }
 
  div.main::-webkit-scrollbar,
@@ -12,22 +10,70 @@
      width: 0px;
  }
 
-
- .main_block {
-     left: 0%;
-     width: 100%;
-     font-size: 150%;
-
-
-     background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%,
-             rgba(252, 70, 107, 0.667) 100%);
-
- }
-
  body {
      background: rgb(63, 94, 251);
      background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%,
-             rgba(252, 70, 107, 0.667) 100%);
+             rgba(252, 70, 107, 0.667) 90%);
+ }
+
+/* Стили для Главной*/
+ .main_block {
+     
+     width: 70%;
+     font-size: 150%;
+     justify-content: center;
+     display: flex;
+     
+     flex-direction: column;
+ }
+
+div[class^=suv-] {
+     flex-direction: column;
+     flex-wrap: wrap;
+     display: flex;
+     text-align: justify;
+     margin: auto;
+ }
+
+ .sidebar-1 {
+     display: flex;
+     justify-content: end;
+ }
+
+ #story_sidebar {
+     font-size: 100%;
+     top: 0
+ }
+
+ .headerr {
+     order: 1;
+     display: flex;
+     text-align: center;
+     justify-content: flex-end;
+     padding: 1%;
+     margin: auto;
+ }
+ 
+ img[class^=sphoto-] {
+     text-align: center;
+     margin: auto;
+     border-radius: 3px;
+     /*width: 30vw;*/
+     order:3;
+ } 
+
+ .sphoto-2 {
+     height: 90vh;
+     width: 60vw;
+ }
+
+ .text {
+     order: 2;
+     display: flex;
+     padding: 2%;
+     max-width: 80%;
+     margin: auto;
+     word-break: normal;
  }
 
  /* стили для галереи*/
@@ -38,7 +84,6 @@
      text-transform: uppercase;
  }
 
-
  .gal_img {
      border-radius: 8px;
      width: 290px;
@@ -46,51 +91,33 @@
      transition-property: width, border-radius;
      transition-duration: .3s;
  }
-/*
- .gal_img:hover {
-     border-radius: 30%;
-     width: 320px;
-     height: 220px;
- } */
-
- .photo {
-
-     padding-left: 4%;
-     margin-bottom: 2%;
- }
-
- td {
-     padding: 10px;
- }
 
  .photo1 {
-
      margin-left: 15%;
      margin-bottom: 2%;
  }
 
  .photo {
+     width: fit-content;
+     display: flex;
+     order: 3;
+     margin: auto;
      border-width: 5px;
      border-color: black;
-
      display: inline-block;
      /*Строчно-блочный элемент*/
      position: relative;
      /*Относительное позиционирование*/
  }
 
- .photo:hover::after {
-     margin-bottom: 20px;
-     margin-left: 15%;
-     width: 95.65%;
-
+ .photo:hover::before {
      content: attr(data-title);
      /* Выводим текст */
      position: absolute;
      /* Абсолютное позиционирование */
      left: 0;
      right: 0;
-     bottom: 0px;
+     top: 0%;
      /* Положение подсказки */
      z-index: 1;
      /* Отображаем подсказку поверх других элементов */
@@ -102,7 +129,6 @@
      /* Выравнивание текста по центру */
      font-family: sans-serif;
      /* Гарнитура шрифта */
-
      font-size: 15px;
      /* Размер текста подсказки */
      padding: 5px 15px;
@@ -110,50 +136,31 @@
      border-radius: 0px 0px 3px 3px;
  }
 
-
- img.photo-2:hover {
-
-     box-shadow: 10px 5px 5px rgba(68, 36, 81, 0.474);
- }
-
- .text {
-
-     padding: 2%;
-     margin: 0 2% 0 2%;
-
-     word-break: normal;
-     width: 50%;
-     margin-left: 8%;
- }
-
  aside[class^=sidebar] {
      font-size: 140%;
-     padding: 5% 8% 30% 5%;
+     padding: 5% 6vw 30% 5vw;
      right: 0%;
      position: fixed;
-
+     width: 20%;
+     text-align: end;
  }
-
 
  .flex-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin-top: 5%;
 }
 
 .flex-navigation {
-    flex: 2;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    padding: 10px;
-    margin: 0 auto;
-    
-
-    height: 150px;
-    width: fit-content;
-     font-size: 125%;
+     order: 3;
+     flex-basis: 30%;
+     flex-shrink: inherit;
+     display: flex;
+     justify-content: center;
+     align-items: flex-start;
+     padding: 10px;
+     margin: 7vh auto;
+     font-size: 140%;
 }
 
 .flex-main {
@@ -161,77 +168,87 @@
     flex-wrap: wrap;
     justify-content: center;
     padding: 10px;
-    
+    width: 80%;
 }
+
 .flex-text {
-    display: flex;
+     display: flex;
+     min-height: 5vh;
+     margin-bottom: 1vh;
      order: 1;
+     justify-content: center;
 }
 
 .flex-image {
-    display: flex;
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
      order: 2;
 }
 
 .gal_img {
-    
-    border-radius: 4px;
+    border-radius: 10%;
     padding: 5px;
-    transition: transform 0.5s;
+    transition: transform 0.5s, z-index;
 }
 
 .gal_img:hover {
-    transform: scale(1.5);
-    border-radius: 15%;
+     transform: scale(1.5);
+     z-index: 2;
+     border-radius: 15%;
 }
 
-
- /* div[class^=flex-img] {flex-flow: column wrap-reverse;} */
-
- img[class^=photo] {
-     margin: 0% 0 2% 25%;
+/* Стили для Событий*/
+ img[class^=photo-] {
+     margin: 2%;
      border-radius: 3px;
  }
 
- /* Стили для Главной*/
- img[class^=sphoto] {
-     /*margin: 10%;*/
-     margin: 0% 0 2% 15%;
-     border-radius: 3px;
- }
-
+ img[class^=photo-]:hover {
+    box-shadow: 10px 5px 5px rgba(68, 36, 81, 0.474);
+}
 
  .event {
      font-size: 150%;
-     margin-left: 2%;
-     padding: 5%;
-     display: inline;
+     padding-top: 2%;
+     padding-left: 2%;
+     display: block;
      text-align: center;
+     width: 70%; 
  }
 
  .description {
      text-overflow: ellipsis;
-     width: 60%;
+     text-align: justify;
      padding: 3%;
      padding-top: 1%;
+     font-weight: bold;
  }
 
  .description1 {
-     text-overflow: ellipsis;
-     width: 60%;
+     text-align: justify;
      padding: 3%;
      padding-top: 1%;
      color: aliceblue;
  }
 
- .headerr {
-     width: 50%;
-     text-align: center;
-     margin-left: 5%;
-     padding: 1%;
+ .info {
+     /* width: 70%; */
+     display: inline-block; 
  }
 
+ .head {
+     text-align: center;
+     color: #f0f0f0;
+     font-style: oblique;
+     font-weight: bold;
+     font-size: xx-large;
+ }
+ 
+
+
  .dropdown {
+     text-align: center;
      margin-bottom: 0%;
      position: relative;
      display: inline-block;
@@ -262,16 +279,20 @@
      display: block;
  }
 
- .dropdown:hover .dropdown-content {
+ .dropbtn:hover ~ .dropdown-content {
      display: block;
+ }
+
+ .dropdown-content:hover {
+    display: block;
  }
 
  .dropdown:hover .dropbtn {
      background-color: #68336c;
  }
 
- .dropdown:hover .navigate {
-     transform: translate3d(-25vh, -10vh, 0px);
+ .dropbtn:hover ~ .navigate {
+     transform: translate3d(0, 14vh, 0);
  }
 
  .navigate {
@@ -304,11 +325,10 @@
  /* Контейнер подсказок */
  .tooltip {
      top: 2%;
-     margin-left: 25%;
+    
      position: relative;
      display: inline-block;
      border-bottom: 1px dotted black;
-     /* Если вы хотите, чтобы точки под перемещаемым текстом */
  }
 
  /* Текст подсказки */
@@ -352,17 +372,16 @@
      opacity: 1;
  }
 
+
  .flag {
-     width: 500px;
+     width: 300px;
      height: 100px;
      transition-duration: 7s;
      transition-property: transform;
-     position: absolute;
-     display: inline-block;
-     align-items: center;
-     bottom: -200px;
-     left: 50px;
-
+     position: relative;
+     display: block;
+     left: 2vw;
+     margin-top: 3%;
  }
 
  .flag img {
@@ -370,7 +389,7 @@
  }
 
  body:hover .flag {
-     transform: translate(900px, 0px);
+     transform: translate3d(60vw, -20vh, 50px) rotateX(360deg);
  }
 
  .flag-1 {
@@ -403,4 +422,29 @@
          width: 200px;
          height: 100px;
      }
+ }
+
+
+ @media print {
+
+     aside[class^=sidebar-], .flex-navigation {
+        display: none;
+     }
+     
+     .gal_img {
+         size: 25%;
+     }
+     .flex-main {
+
+         width: 100%;
+     }
+
+ }
+
+ @font-face {
+    font-family: 'full-power';
+    src: url(../fonts/fontello-0e73dbfa/font/full-power.eot);
+
+    font-weight: normal;
+    font-style: normal;
  }

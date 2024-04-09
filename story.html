@@ -11,57 +11,35 @@
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="CSS/style.css">
+        <link rel="stylesheet" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+        <link rel="shortcut icon" href="fonts/fontello-0e73dbfa/css/animation.css">
     </head>
     <body>
-
-        <aside class="sidebar-1">
-
-            <div class="dropdown">
-                <button class="dropbtn">Панель навигации</button>
-                <div class="dropdown-content">
-                    <a href="gallery.html">Галерея</a>
-                    <a href="events.html">События</a>
-                    
-                </div>
-
-                <div class="navigate">
-                    <div class="left">
-                        <a href="gallery.html"> Назад </a>
-                    </div>
-                    <div class="right">
-                        <a href="events.html"> Вперёд </a>
-                    </div>
-                </div>
-
-            </div>
-
-            
-            
-        </aside>
         
         <div class="main_block">
-            <div class="headerr">
-                <h2>День России</h2>
-            </div>
-
-            <div class="suv">
+            
+            <div class="suv-1">
+                <div class="headerr">
+                    <h2>День России</h2>
+                </div>
+            
                 <div class="text">
                     Праздник под названием &laquo;День России&raquo; официально
                      стали отмечать примерно 30 лет назад.
                     Это связано с принятием Декларации о государственном суверенитете в 1990 году.
                 </div>
-                <img class="sphoto-1"  src="img/rus_dayc1.jpg" alt="Картинка День России">
-            
+                <div class="photo" data-title="Празднование Дня России">
+                    <img class="sphoto-1"  src="img/rus_dayc1.jpg" alt="Картинка День России">
+                </div>
             </div>
-
             
+            <div class="suv-2">
+                <div class="headerr">
+                    <h2>
+                        Дата праздника
+                    </h2>
+                </div>
             
-            <div class="headerr">
-                <h2>
-                    Дата праздника
-                </h2>
-            </div>
-            <div class="suv">
                 <div class="text">
                     День России имеет фиксированную дату, каждый год он отмечается 12 июня.
                     В 2024 году это число выпадает на вторник.
@@ -71,16 +49,36 @@
                 </div>
                 
                 <map name="calendar">
-                    <area shape="rect" coords="470,150,500,180" 
+                    <area shape="rect" coords="562,167,590,194" 
                     href="https://ru.wikipedia.org/wiki/Международный_женский_день">
                 </map>
                 <div class="photo" data-title="Рабочий календарь на 2024 год">
                     <img class="sphoto-2" usemap="#calendar" 
-                src="img/Calendar_2024_2.jpg" alt="Производственный календарь" >
+                src="img/cal_2024_2.jpg" alt="Производственный календарь" >
                 </div>
                 
             </div>
 
+            <aside class="sidebar-1" id="story_sidebar">
+                <div class="dropdown">
+                    <button class="dropbtn">Панель навигации</button>
+                    <div class="dropdown-content">
+                         <a href="gallery.html"><i class="fa fa-camera-retro fa-fw" aria-hidden="true"></i>&nbsp; Галерея</a>
+                         <a href="events.html"><i class="fa fa-spinner fa-fw" aria-hidden="true"></i>&nbsp;События</a>
+                    </div>
+    
+                    <div class="navigate">
+                        <div class="left">
+                            <a href="gallery.html"> <i class="fa fa-camera-retro fa-fw" aria-hidden="true"></i>&nbsp;Назад </a>
+                        </div>
+                        <div class="right">
+                            <a href="events.html"> <i class="fa fa-spinner fa-fw" aria-hidden="true"></i>&nbsp;Вперёд </a>
+                        </div>
+                    </div>
+    
+                </div>
+    
+            </aside>
             
         </div>
         
