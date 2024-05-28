@@ -1,28 +1,19 @@
 *{
     margin: 0;
     padding: 0;
+
+    font-family: Klukva;
+    
+    
     
 }
 
-a{
-    padding: 2%;
-    margin:5%;
-    text-decoration: none;
-    list-style-type: circle;
-   
-}
-.button{
-    padding: 2%;
-    margin:5%;
-    text-decoration: none;
-    
-    display: inline;
-    float: left;
-}
 
-.sidebar{
+aside.sidebar{
 
     height: 50%;
+
+    font-size: 125%;
 
     margin-left: 0%;
     margin-bottom: 15%;
@@ -30,22 +21,22 @@ a{
     padding: 2% 5% 30% 5%;
    
     float: right;
-    background-color: bisque;
+    
 }
 
-.main{
+img[class^=photo]{
     /*margin: 10%;*/
+    margin: 0% 0 2% 30%;
+    
+}
+
+.event{
+    font-size: 150%;
     margin-left: 2%;
     padding: 5%;
     display: inline;
     text-align: center;
-
     
-}
-
-
-.event{
-    margin-bottom: 10px;
     
 }
 
@@ -64,71 +55,113 @@ a{
     color:aliceblue;
 }
 
-.gagarin{
-    margin-left: -19%;
-}
 
-.navi{
-    list-style-type: square;
-}
-
-.left{
-    float: left;
-    margin-right: 1%;
-}
-
-.right{
-    float: right;
-    margin-right: 1%;
-}
 
 /* Контейнер подсказок */
 .tooltip {
-  position: relative;
-  display: inline-block;
-  border-bottom: 1px dotted black; /* Если вы хотите, чтобы точки под перемещаемым текстом */
+    margin-left: 25%;
+    position: relative;
+    display: inline-block;
+    border-bottom: 1px dotted black; /* Если вы хотите, чтобы точки под перемещаемым текстом */
 }
 
 /* Текст подсказки */
 .tooltip .tooltiptext {
-  visibility: hidden;
-  width: 220px;
-  background-color: rgba(0, 0, 0, 0.6);
-  color: #fff;
-  text-align: center;
-  padding: 5px 0;
-  border-radius: 6px;
+    visibility: hidden;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;
 
 
-  /* Расположите текст подсказки */
-  position: absolute;
-  z-index: 1;
-  top: 125%;
-  left: 20%;
-  margin-left: -60px;
+    /* Расположение текста подсказки */
+    position: absolute;
+    z-index: 1;
+    top: 125%;
+    left: 20%;
+    margin-left: -60px;
 
 
-  /* Исчезают в подсказке */
-  opacity: 0;
-  transition: opacity 0.3s;
+    /* Исчезают в подсказке */
+    opacity: 0;
+    transition: opacity 0.3s;
 }
 
 /* Подсказка стрелка */
 .tooltip .tooltiptext::after 
 {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
-  border-style: solid;
-  border-color: #555 transparent transparent transparent;
-  transform: rotate(180deg);
+    content: "";
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #131313 transparent transparent transparent;
+    transform: rotate(180deg);
 }
 
 /* Отображение текста подсказки при наведении курсора мыши на контейнер подсказки */
 .tooltip:hover .tooltiptext {
-  visibility: visible;
-  opacity: 1;
+    visibility: visible;
+    opacity: 1;
+}
+
+
+.dropdown{
+    margin-bottom: 50%;
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn{
+    background-color:#8b538582 ;
+    color:azure;
+    padding: 16px;
+    font-size: 22px;
+    border: none;
+}
+
+.dropdown-content{
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a{
+    text-align: center;
+    color:black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+    
+
+.dropdown:hover .dropbtn {background-color: #68336c;}
+
+
+.left, .right {
+    padding-top: 15%;
+    min-width: 50%;
+    align-items: center;
+    text-align: center;
+    display: block;
+    margin: 10px;
+    padding: 5px 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.left a, .right a{
+    text-decoration: none;
 }

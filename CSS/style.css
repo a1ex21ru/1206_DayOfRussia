@@ -11,23 +11,20 @@
  }
 
  body {
-     background: rgb(63, 94, 251);
      background: radial-gradient(circle, rgba(63, 94, 251, 1) 0%,
              rgba(252, 70, 107, 0.667) 90%);
  }
 
-/* Стили для Главной*/
+ /* Стили для Главной*/
  .main_block {
-     
      width: 70%;
      font-size: 150%;
      justify-content: center;
      display: flex;
-     
      flex-direction: column;
  }
 
-div[class^=suv-] {
+ div[class^=suv-] {
      flex-direction: column;
      flex-wrap: wrap;
      display: flex;
@@ -53,17 +50,17 @@ div[class^=suv-] {
      padding: 1%;
      margin: auto;
  }
- 
+
  img[class^=sphoto-] {
      text-align: center;
      margin: auto;
      border-radius: 3px;
-     /*width: 30vw;*/
-     order:3;
- } 
+     order: 3;
+ }
+
 
  .sphoto-2 {
-     height: 90vh;
+     height: 60%;
      width: 60vw;
  }
 
@@ -97,7 +94,113 @@ div[class^=suv-] {
      margin-bottom: 2%;
  }
 
+ aside[class^=sidebar] {
+     font-size: 140%;
+     padding: 2% 6vw 30% 5vw;
+     right: 0%;
+     position: fixed;
+     width: 20%;
+     text-align: end;
+ }
+
+ .flex-container {
+     display: flex;
+     flex-direction: row;
+     justify-content: space-between;
+ }
+
+ .flex-main {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     padding: 10px;
+     width: 80%;
+ }
+
+ .flex-text {
+     display: flex;
+     min-height: 5vh;
+     margin-bottom: 1vh;
+     order: 1;
+     justify-content: center;
+ }
+
+ .flex-image {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+     order: 2;
+ }
+
+ .flex-navigation {
+     display: flex;
+     order: 3;
+     flex-basis: 30%;
+     flex-shrink: inherit;
+     justify-content: center;
+     align-items: flex-start;
+     padding: 10px;
+     margin: 7vh auto;
+     font-size: 140%;
+ }
+
+ .gal_img {
+     border-radius: 10%;
+     padding: 5px;
+     transition: transform 0.5s, z-index;
+ }
+
+ .gal_img:hover {
+     transform: scale(1.5);
+     z-index: 1;
+     border-radius: 15%;
+ }
+
+ /* Стили для Событий*/
+ img[class^=photo-] {
+     margin: 2%;
+     border-radius: 3px;
+ }
+
+ img[class^=photo-]:hover {
+     box-shadow: 10px 5px 5px rgba(68, 36, 81, 0.474);
+ }
+
+ .event {
+     font-size: 150%;
+     padding-top: 2%;
+     padding-left: 2%;
+     display: block;
+     text-align: center;
+     width: 70%;
+ }
+
+ .description {
+     text-overflow: clip;
+     text-align: justify;
+     text-indent: 5%;
+     padding: 3%;
+     padding-top: 1%;
+     font-weight: bold;
+ }
+
+ .description1 {
+     text-align: justify;
+     text-indent: 5%;
+     padding: 3%;
+     padding-top: 1%;
+     color: aliceblue;
+ }
+
+ .info {
+     display: inline-block;
+ }
+
  .photo {
+    animation: move 5s ;
+    animation-iteration-count: infinite;
+    animation-direction: normal;
+
      width: fit-content;
      display: flex;
      order: 3;
@@ -136,107 +239,6 @@ div[class^=suv-] {
      border-radius: 0px 0px 3px 3px;
  }
 
- aside[class^=sidebar] {
-     font-size: 140%;
-     padding: 5% 6vw 30% 5vw;
-     right: 0%;
-     position: fixed;
-     width: 20%;
-     text-align: end;
- }
-
- .flex-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-}
-
-.flex-navigation {
-     order: 3;
-     flex-basis: 30%;
-     flex-shrink: inherit;
-     display: flex;
-     justify-content: center;
-     align-items: flex-start;
-     padding: 10px;
-     margin: 7vh auto;
-     font-size: 140%;
-}
-
-.flex-main {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 10px;
-    width: 80%;
-}
-
-.flex-text {
-     display: flex;
-     min-height: 5vh;
-     margin-bottom: 1vh;
-     order: 1;
-     justify-content: center;
-}
-
-.flex-image {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: center;
-     order: 2;
-}
-
-.gal_img {
-    border-radius: 10%;
-    padding: 5px;
-    transition: transform 0.5s, z-index;
-}
-
-.gal_img:hover {
-     transform: scale(1.5);
-     z-index: 2;
-     border-radius: 15%;
-}
-
-/* Стили для Событий*/
- img[class^=photo-] {
-     margin: 2%;
-     border-radius: 3px;
- }
-
- img[class^=photo-]:hover {
-    box-shadow: 10px 5px 5px rgba(68, 36, 81, 0.474);
-}
-
- .event {
-     font-size: 150%;
-     padding-top: 2%;
-     padding-left: 2%;
-     display: block;
-     text-align: center;
-     width: 70%; 
- }
-
- .description {
-     text-overflow: ellipsis;
-     text-align: justify;
-     padding: 3%;
-     padding-top: 1%;
-     font-weight: bold;
- }
-
- .description1 {
-     text-align: justify;
-     padding: 3%;
-     padding-top: 1%;
-     color: aliceblue;
- }
-
- .info {
-     /* width: 70%; */
-     display: inline-block; 
- }
-
  .head {
      text-align: center;
      color: #f0f0f0;
@@ -244,8 +246,6 @@ div[class^=suv-] {
      font-weight: bold;
      font-size: xx-large;
  }
- 
-
 
  .dropdown {
      text-align: center;
@@ -284,7 +284,7 @@ div[class^=suv-] {
  }
 
  .dropdown-content:hover {
-    display: block;
+     display: block;
  }
 
  .dropdown:hover .dropbtn {
@@ -314,7 +314,6 @@ div[class^=suv-] {
      border-radius: 5px;
  }
 
-
  .left a,
  .right a {
      text-decoration: none;
@@ -325,7 +324,6 @@ div[class^=suv-] {
  /* Контейнер подсказок */
  .tooltip {
      top: 2%;
-    
      position: relative;
      display: inline-block;
      border-bottom: 1px dotted black;
@@ -379,7 +377,7 @@ div[class^=suv-] {
      transition-property: transform;
      position: relative;
      display: block;
-     left: 2vw;
+     left: 1vw;
      margin-top: 3%;
  }
 
@@ -392,18 +390,13 @@ div[class^=suv-] {
  }
 
  .flag-1 {
-     transition-timing-function: ease;
+     transition-timing-function: linear;
  }
-
 
  @media screen and (width: 400px) {
      header {
          padding: 10px;
      }
-
-     /* body {
-        padding: 10px;
-    } */
 
      .dropdown:hover .navigate {
          transform: translate3d(-5vh, -1vh, 0px);
@@ -423,27 +416,16 @@ div[class^=suv-] {
      }
  }
 
-
  @media print {
-
-     aside[class^=sidebar-], .flex-navigation {
-        display: none;
-     }
-     
-     .gal_img {
-         size: 25%;
-     }
-     .flex-main {
-
-         width: 100%;
-     }
-
+     aside[class^=sidebar-],
+     .flex-navigation {display: none;}
+     .gal_img {size: 25%;}
+     .flex-main {width: 100%;}
  }
-
- @font-face {
-    font-family: 'full-power';
-    src: url(../fonts/fontello-0e73dbfa/font/full-power.eot);
-
-    font-weight: normal;
-    font-style: normal;
+ 
+ @keyframes move {
+     0% { transform: translateX(-50px); }
+     50% { transform: translateX(80px); }
+     100% { transform: translateX(-50px); }
  }
+ 

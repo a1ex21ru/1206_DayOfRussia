@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Страны</title>
+    <style>
+        .countriesTable {
+            text-align: center;
+            margin: auto;
+        }
+
+        .countriesTable h1 {
+            margin-top: 0;
+            text-align: center;
+        }
+
+        .countriesTable .head {
+            background-color: #D3D3D3;
+        }
+
+        .info {
+            width: 75%;
+            margin: 0 auto;
+            text-align: start;
+        }
+
+        .historyTable,
+        .historyTable td,
+        .historyTable tr {
+            text-align: center;
+            border: 1px solid;
+        }
+
+        .historyTable td {
+            vertical-align: top;
+            text-align: center;
+            align-items: center;
+        }
+
+        #timer {
+            display: inline-block;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="timer">
+        <p>До конца учебного года осталось</p>
+        <div id="days"></div>
+        <div>days</div>
+        <div id="hours"></div>
+        <div>hours</div>
+        <div id="minutes"></div>
+        <div>minutes</div>
+        <div id="seconds"></div>
+        <div>seconds</div>
+    </div>
+
+    <form name="for_filter">
+        <input name="field_filter" id="input_id" min="0" max="50" type="number"
+            title="Поле для ввода ограничения длины символов в географических объектов">
+
+    </form>
+
+
+    <div id="country"></div>
+    <script src="./countries.js" type="application/javascript"></script>
+</body>
